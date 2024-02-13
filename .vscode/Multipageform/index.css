@@ -63,7 +63,7 @@ form button{
     width: 110px;
     height: 35px;
     margin: 0 10px;
-    background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+    background: linear-gradient(to right, #12bdec, #d618e7);
     border-radius: 30px;
     border: 0;
     outline: none;
@@ -98,6 +98,12 @@ form button{
     position: relative;
 }
 
+#progress{
+    position: absolute;
+    height: 100%;
+    width: 120px;
+    background: linear-gradient(to right, #1a79e4, #2091e8);
+}
 
 small{
     color: #fff;
@@ -105,3 +111,14 @@ small{
     font-size: 0.8em;
 }
 
+#progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #8915e8fc;
+}
